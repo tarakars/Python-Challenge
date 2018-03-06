@@ -1,4 +1,4 @@
-# first is first - import all the libraries we need to perform the tasks
+# first is first - Import Libraries 
 import csv
 import os
 import pandas as pd
