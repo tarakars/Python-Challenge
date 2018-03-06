@@ -10,7 +10,6 @@ with open(paragraph_path,'r') as text:
     print(str(len(words)))
     sentence = paragraph.split(".")
     print(str(len(sentence)))
-    print(sentence)
     average_sentence_length = (len(words)/len(sentence))
     print(average_sentence_length)
     average_letter_count = (len(paragraph)/len(words))
