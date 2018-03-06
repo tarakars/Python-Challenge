@@ -7,6 +7,7 @@ paragraph_path = os.path.join("raw_data", "paragraph_2.txt")
 with open(paragraph_path,'r') as text:
     paragraph = text.read()
     words = paragraph.split(" ")
+    #print(words)
     print(str(len(words)))
     sentence = paragraph.split(".")
     print(str(len(sentence)))
