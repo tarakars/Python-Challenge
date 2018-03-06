@@ -27,7 +27,7 @@ with open(budget_data_path,newline="") as csvfile: # making sure our operations 
 
     for i in range(1,len(revenue)): # creating a loop through the revenue array to calculate the average revenue change
         rev_change.append(revenue[i] - revenue[i-1])
-        average_rev_change = sum(rev_change)/len(rev_change)
+    average_rev_change = sum(rev_change)/len(rev_change)
     print("average revenue change:" + str(average_rev_change))
 
     max_increase = max(rev_change) # max function is used to get the max value in the revenue change for the greatest increase in revenue in each month
