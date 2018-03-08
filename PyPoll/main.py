@@ -1,4 +1,4 @@
-# First is first, Import the libraries
+# Import the libraries
 import csv
 import os
 import pandas as pd
