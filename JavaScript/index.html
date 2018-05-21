@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ALIENS-R-REAL</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="jumbotron">
+        <h1 class="display-3">ALIENS-R-REAL BRUH</h1>
+        <br>
+        <h2 class="lead">Yo Wake Up, we feel "ALIENS" are F*****g Real</h2>
+        <h2 class="lead">Don't beleive it??? check the data of sighitings Yo:)</h2>
+      </div>
+
+    <div class="row">
+      <div class="col-md-9 text-left">
+        <div class="form-inline">
+          <label>Show
+            <select id="pages">
+              <option value="10">10</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+            </select>  Records
+          </label>
+        </div>
+      </div>
+      <div class="col-md-3 text-right">
+        <div class="form-inline">
+          <p id="recordCounter"> From Record: to: of </p>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-2">
+              <input type="text" class="form-control" id="date_time" placeholder="date/time">
+            </div>
+            <div class="col-md-2">
+              <input type="text" class="form-control" id="city" placeholder="city">
+            </div>
+            <div class="col-md-2">
+              <input type="text" class="form-control" id="state" placeholder="state">
+            </div>
+            <div class="col-md-2">
+              <input type="text" class="form-control" id="country" placeholder="country">
+            </div>
+            <div class="col-md-2">
+              <input type="text" class="form-control" id="shape" placeholder="shape">
+            </div>
+            <div class="col-md-1"></div>
+          </div>
+
+          <div class="row"><hr></div>
+
+          <div class="row">
+            <div class="col-md-4 text-left"></div>
+            <div class="col-md-4 text-center">
+              <button id="search" type="button" class="btn btn-success">Search</button>
+            </div>
+            <div class="col-md-4 text-right"></div>
+          </div>
+
+          <div class="row">
+            <hr>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Datetime</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Country</th>
+                <th>Shape</th>
+                <th>Duration/Minutes</th>
+                <th>Comments</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+      <div class="row">
+        <div class="col-md-4 text-left">
+          <button id="prev" type="button" class="btn btn-primary">Prev Page</button>
+        </div>
+        <div class="col-md-4 text-center">
+          <button id="load" type="button" class="btn btn-danger">Reload</button>
+        </div>
+        <div class="col-md-4 text-right">
+          <button id="next" type="button" class="btn btn-primary">Next Page ></button>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <script src="data.js" type="text/javascript"></script>
+    <script src="index.js" type="text/javascript"></script>
+
+  </body>
+
+</html>
