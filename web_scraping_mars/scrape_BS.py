@@ -42,7 +42,8 @@ def scrape():
     for text in browser.find_by_css('.tweet-text'):
         if text.text.partition(' ')[0] == 'Sol':
             mars_weather = text.text
-        break
+            break
+    print(mars_weather)
     
 # ## Mars Facts
 
