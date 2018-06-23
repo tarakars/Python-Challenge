@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CMPD Police Traffic Stops Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.7.3/d3.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>CMPD Police Traffic Stops Dashboard</h1>
+        <hr>
+      </div>
+    </div>
+    <div class = "containter">
+        <div class ="row">
+          <div class = "col-md-3">
+            <select class="custom-select" onchange="result_filter=this.value;renderAllCharts()">
+                  <option selected="selected" value="">Select result</option>
+                  <option>Arrest</option>
+                  <option>Citation Issued</option>
+                  <option>No Action Taken</option>
+                  <option>Verbal Warning</option>
+                  <option>Written Warning</option>
+            </select>
+        </div>
+          <div class = "col-md-3">
+              <select class="custom-select" onchange="division_filter=this.value;renderAllCharts()">
+                  <option selected="selected" value="">Select division</option>
+                  <option>Central Division</option>
+                  <option>Eastway Division</option>
+                  <option>Freedom Division</option>
+                  <option>Hickory Grove Division</option>
+                  <option>Independence Division</option>
+                  <option>Metro Division</option>
+                  <option>North Division</option>
+                  <option>North Tryon Division</option>
+                  <option>Providence Division</option>
+                  <option>South Division</option>
+                  <option>Steele Creek Division</option>
+                  <option>University City Division</option>
+                  <option>Westover Division</option>
+
+                </select>
+          </div>
+          <div class = "col-md-3">
+              <select class="custom-select" onchange="years_filter=this.value;renderAllCharts()">
+                  <option selected="selected" value="">Select year</option>
+                  <option>2016</option>
+                  <option>2017</option>
+                </select>
+          </div>
+
+          <div class = "col-md-3">
+              <select class="custom-select" onchange="reasons_filter=this.value;renderAllCharts()">
+                  <option selected="selected" value="">Select reason</option>
+                  <option>CheckPoint               </option>
+                  <option>Driving While Impaired   </option>
+                  <option>Other                    </option>
+                  <option>Safe Movement            </option>
+                  <option>SeatBelt                 </option>
+                  <option>Speeding                 </option>
+                  <option>Stop Light/Sign          </option>
+                  <option>Vehicle Equipment        </option>
+                  <option>Vehicle Regulatory       </option>
+
+
+                </select>
+          </div>
+        </div>
+        <br>
+        <div class ="row">
+            <div class="col-md-4">
+                <div id="stats"></div>
+          </div>
+        </div>
+
+        <div class = "row">
+          <div class = "col-md-6">
+              <div id="reasons_chart"></div>
+          </div>
+          <div class = "col-md-6">
+              <div id="results_chart"></div>
+          </div>
+        </div>
+
+        <br>
+
+        <div class= "row">
+            <div class = "col-md-3">
+                <div id="years_chart"></div>
+            </div>
+            <div class = "col-md-9">
+                <div id="chart1"></div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+
+    <br>
+    <br>
+    <div class="row">
+      <div class = "col-md-2">
+          <p></p>
+      </div>
+      <div class="col-md-8 embed-responsive embed-responsive-16by9">
+        <iframe class=embed-responsive-item src=/charlotte-map id=mapper marginwidth:"100"></iframe>
+      </div>
+      <div class = "col-md-2">
+          <p></p>
+      </div>
+    </div>
+    <div class="row">
+        <br>
+        <br>
+        <br>
+        <p></p>
+      </div>
+
+  <script src="{{ url_for('static', filename='js/divisions_chart.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/reasons_chart.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/results_chart.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/years_chart.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/chart1.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/stats.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+
+</body>
+
+</html>
