@@ -22,62 +22,6 @@
     </div>
     <div class = "containter">
         <div class ="row">
-          <div class = "col-md-3">
-            <select class="custom-select" onchange="result_filter=this.value;renderAllCharts()">
-                  <option selected="selected" value="">Select result</option>
-                  <option>Arrest</option>
-                  <option>Citation Issued</option>
-                  <option>No Action Taken</option>
-                  <option>Verbal Warning</option>
-                  <option>Written Warning</option>
-            </select>
-        </div>
-          <div class = "col-md-3">
-              <select class="custom-select" onchange="division_filter=this.value;renderAllCharts()">
-                  <option selected="selected" value="">Select division</option>
-                  <option>Central Division</option>
-                  <option>Eastway Division</option>
-                  <option>Freedom Division</option>
-                  <option>Hickory Grove Division</option>
-                  <option>Independence Division</option>
-                  <option>Metro Division</option>
-                  <option>North Division</option>
-                  <option>North Tryon Division</option>
-                  <option>Providence Division</option>
-                  <option>South Division</option>
-                  <option>Steele Creek Division</option>
-                  <option>University City Division</option>
-                  <option>Westover Division</option>
-
-                </select>
-          </div>
-          <div class = "col-md-3">
-              <select class="custom-select" onchange="years_filter=this.value;renderAllCharts()">
-                  <option selected="selected" value="">Select year</option>
-                  <option>2016</option>
-                  <option>2017</option>
-                </select>
-          </div>
-
-          <div class = "col-md-3">
-              <select class="custom-select" onchange="reasons_filter=this.value;renderAllCharts()">
-                  <option selected="selected" value="">Select reason</option>
-                  <option>CheckPoint               </option>
-                  <option>Driving While Impaired   </option>
-                  <option>Other                    </option>
-                  <option>Safe Movement            </option>
-                  <option>SeatBelt                 </option>
-                  <option>Speeding                 </option>
-                  <option>Stop Light/Sign          </option>
-                  <option>Vehicle Equipment        </option>
-                  <option>Vehicle Regulatory       </option>
-
-
-                </select>
-          </div>
-        </div>
-        <br>
-        <div class ="row">
             <div class="col-md-4">
                 <div id="stats"></div>
           </div>
